@@ -1,0 +1,46 @@
+Me he conectado con exito! ('127.0.0.1', 40866)
+hola ('127.0.0.1', 40866)
+wenaaa ('127.0.0.1', 40866)
+Me he conectado con exito! ('127.0.0.1', 41162)
+ ('127.0.0.1', 41194)
+ ('127.0.0.1', 41194)
+Me he conectado con exito! ('127.0.0.1', 41196)
+wena ('127.0.0.1', 41196)
+coomo estas ('127.0.0.1', 41196)
+asdjask,mjdkasjdkasjdklsajdklsajkdljsakldjaskldasjdk ('127.0.0.1', 41196)
+ ('127.0.0.1', 41196)
+ ('127.0.0.1', 41196)
+Me he conectado con exito! ('127.0.0.1', 41224)
+hola ('127.0.0.1', 41224)
+EXISde ('127.0.0.1', 41224)
+ ('127.0.0.1', 41224)
+ ('127.0.0.1', 41224)
+Me he conectado con exito! ('127.0.0.1', 41258)
+hola ('127.0.0.1', 41258)
+este mensaje es de prueba ('127.0.0.1', 41258)
+ ('127.0.0.1', 41258)
+ ('127.0.0.1', 41258)
+MENSAJE:
+    
+DE CLIENTE('127.0.0.1', 41296)
+MENSAJE:
+    
+DE CLIENTE('127.0.0.1', 41296)
+MENSAJE:
+    Me he conectado con exito!
+DE CLIENTE('127.0.0.1', 41298)
+MENSAJE:
+    
+DE CLIENTE('127.0.0.1', 41298)
+MENSAJE:
+    
+DE CLIENTE('127.0.0.1', 41298)
+MENSAJE:
+    hola
+DE CLIENTE('127.0.0.1', 50768)
+MENSAJE:
+    Hola
+DE CLIENTE('127.0.0.1', 41390)
+MENSAJE:
+    wena
+DE CLIENTE('127.0.0.1', 41390)

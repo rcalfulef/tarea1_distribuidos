@@ -1,0 +1,69 @@
+Guardado correctamente
+Guardado correctamente
+Guardado correctamente
+Guardado correctamente
+Guardado correctamente
+Guardado correctamente
+Guardado correctamente
+Guardado correctamente
+Guardado correctamente
+Guardado correctamente
+Guardado correctamente
+Guardado correctamente
+Guardado correctamente
+Guardado correctamente
+Guardado correctamente
+Guardado correctamente
+
+Guardado correctamente
+Guardado correctamente
+Guardado correctamente
+Guardado correctamente
+Guardado correctamente
+Guardado correctamente
+Guardado correctamente
+Guardado correctamente
+Guardado correctamente
+
+mensaje: Me he conectado con exito! -- guardado en('127.0.0.1', 5001)
+mensaje: wena -- guardado en('127.0.0.1', 5001)
+mensaje: coomo estas -- guardado en('127.0.0.1', 5001)
+mensaje: asdjask,mjdkasjdkasjdklsajdklsajkdljsakldjaskldasjdk -- guardado en('127.0.0.1', 5001)
+MENSAJE: Me he conectado con exito!
+ EN ('127.0.0.1', 5001)
+MENSAJE: hola
+ EN ('127.0.0.1', 5001)
+MENSAJE: EXISde
+ EN ('127.0.0.1', 5001)
+MENSAJE:
+    Me he conectado con exito!
+EN ('127.0.0.1', 5001)
+
+MENSAJE:
+    hola
+EN ('127.0.0.1', 5001)
+
+MENSAJE:
+    este mensaje es de prueba
+EN ('127.0.0.1', 5001)
+
+MENSAJE:
+    Me he conectado con exito!
+EN ('127.0.0.1', 5001)
+
+
+
+--conexion--
+MENSAJE:
+    hola
+EN ('127.0.0.1', 4001)
+
+--conexion--
+MENSAJE:
+    Hola
+EN ('127.0.0.1', 5001)
+
+MENSAJE:
+    wena
+EN ('127.0.0.1', 5001)
+

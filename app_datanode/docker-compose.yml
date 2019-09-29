@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  datanode:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ubuntu
+    ports:
+      - "5001:5001"

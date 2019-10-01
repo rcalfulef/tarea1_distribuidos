@@ -4,6 +4,8 @@ MAINTAINER Andres calfulef "rcalfulef@gmail.com"
 
 RUN apt-get update && apt-get install -y \
 	python3 \
-	python3-pip 
+	python3-pip
 
-CMD ["python3" ,"/usr/bin/client.py"]
+COPY datanode.py /usr/bin/datanode.py
+
+CMD ["python3" ,"/usr/bin/datanode.py"]

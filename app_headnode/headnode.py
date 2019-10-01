@@ -1,11 +1,12 @@
 import socket
+import time
 from threading import Thread, Timer
 from random import choice
-cant_datanodes = 1
+cant_datanodes = 3
 
 def Main():
-    host = "0.0.0.0"  # Ip host
-    port = int(input("ingrese puerto a utilizar en el headnode: "))
+    host = "headnode"  # Ip host
+    port = 5000
     mySocket = socket.socket()  # Instanciamos un socket
     
     sockets = sockets_datanodes(cant_datanodes) # Sockets para conectarse a los datanodes
@@ -48,9 +49,10 @@ def cliente_thread(conn,addr,sockets,max_buffer_size=1024):
         else: # si envia un mensaje
             print("mensaje del cliente "+ str(addr))
             aleatorio = choice(sockets)
-            aleatorio.send(input_cliente.encode())
+            output_datanode = input_cliente + "--%--" + str(addr)  ## se le agrega la ip y puerto del cliente, para que el datanode sepa a que cliente pertenece el mensaje. 
+            aleatorio.send(output_datanode.encode())
             respuesta = recibir_input_socket(aleatorio)
-            mensaje_a_cliente = "MENSAJE:\n    "+input_cliente+"\nEN "+str(aleatorio.getpeername())+'\n'
+            mensaje_a_cliente = "MENSAJE:\n    "+input_cliente+"\nALMACENADO EN "+str(aleatorio.getpeername())+'\n'
             conn.send(mensaje_a_cliente.encode())
         
         
@@ -81,13 +83,24 @@ def escribir(nombreArchivo,aEscribir):
     var.close()
 
 def sockets_datanodes(cant_datanodes):
-    lista = []
+    """lista = []
     for i in range(cant_datanodes): # creamos los sockets para cada uno de los datanodes
         sock = socket.socket()
         dhost = str(input("ingrese ip del datanode "+ str(i) +" : "))
         dport = int(input("ingrese puerto del datanode "+ str(i) +" : "))
         sock.connect((dhost,dport))
-        lista.append(sock)
+        lista.append(sock)"""
+
+    sock1 = socket.socket()
+    sock1.connect(("datanode1",5001))
+    sock2 = socket.socket()
+    sock2.connect(("datanode2",5002))
+    sock3 = socket.socket()
+    sock3.connect(("datanode3",5003))
+    
+    lista = [sock1,sock2,sock3]
+
+
     return lista
 	
 def multicast(sockets):
@@ -96,7 +109,7 @@ def multicast(sockets):
         socket.send("--estado--".encode())
         respuesta = recibir_input_socket(socket)
         if "--vivo--" in respuesta:
-            escribir("hearbeat_server.txt",str(socket.getpeername())+"\n")
+            escribir("hearbeat_server.txt",time.ctime(time.time()) + " " + str(socket.getpeername())+"\n")
                      
 if __name__ == '__main__':
     Main()

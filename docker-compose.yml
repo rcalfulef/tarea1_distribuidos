@@ -1,12 +1,42 @@
 version: '3'
 
 services:
-  server:
+  datanode1:
+    container_name: datanode1
     build:
-      context: ./app_server
+      context: ./app_datanode1
       dockerfile: Dockerfile
     image: ubuntu
-    ports:
-      - "5000:5000"
     volumes:
-      - .:/app_server
+      - ./app_datanode1:/usr/bin:rw
+
+  datanode2:
+    container_name: datanode2
+    build:
+      context: ./app_datanode2
+      dockerfile: Dockerfile
+    image: ubuntu
+    volumes:
+      - ./app_datanode2:/usr/bin:rw
+
+  datanode3:
+    container_name: datanode3
+    build:  
+      context: ./app_datanode3
+      dockerfile: Dockerfile
+    image: ubuntu
+    volumes:
+      - ./app_datanode3:/usr/bin:rw
+  
+  headnode:
+    container_name: headnode
+    build:
+      context: ./app_headnode
+      dockerfile: Dockerfile
+    image: ubuntu
+    volumes:
+    - act1:/usr/bin:rw
+  
+
+volumes:
+   act1:

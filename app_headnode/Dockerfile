@@ -4,11 +4,8 @@ MAINTAINER Andres calfulef "rcalfulef@gmail.com"
 
 RUN apt-get update && apt-get install -y \
 	python3 \
-	python3-pip \
-	iputils-ping \
-	iproute2 \
-	dnsutils \
-	vim \
-	sqlite3 
+	python3-pip 
 
-COPY server.py /usr/bin/server.py
+COPY headnode.py /usr/bin/headnode.py
+
+CMD ["python3" ,"/usr/bin/headnode.py"] 

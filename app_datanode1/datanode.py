@@ -1,15 +1,15 @@
 import socket
 
 def Main():
-    host = "0.0.0.0"  # Ip host
-    port =  int(input("ingrese puerto a utilizar: "))
+    host = "datanode1"  # Ip host
+    port =  5001
     mySocket = socket.socket()  # Instanciamos un socket
     
     try:
         mySocket.bind((host,port)) # La funcion bind recibe una tupla, que contiene el host y el puerto 
 		
     except:
-        print("no se ha podido crear el socket")
+        print("no se ha podido crear el socket del datanode 1")
         exit(1)
         
     mySocket.listen(1)  # solo soportara una conexion
@@ -43,7 +43,8 @@ def datanode(conn,addr,max_buffer_size=1024):
             conn.send("--vivo--".encode())
         else:
             print("mensaje desde el headnode recibido")
-            guardar_en_data(input_headnode,addr)
+            input_headnode = input_headnode.split("--%--")
+            guardar_en_data(input_headnode[0],input_headnode[1])
             conn.send("Guardado correctamente en data".encode())
 
 

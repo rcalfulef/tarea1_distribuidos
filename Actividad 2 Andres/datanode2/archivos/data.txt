@@ -1,0 +1,76 @@
+MENSAJE:
+    hola
+DE CLIENTE('172.18.0.6', 50672)
+
+MENSAJE:
+    tercer mensaje
+DE CLIENTE('172.18.0.6', 50672)
+
+MENSAJE:
+    hola
+DE CLIENTE('172.25.0.6', 51472)
+
+MENSAJE:
+    esto es una prueba
+DE CLIENTE('172.25.0.6', 51472)
+
+MENSAJE:
+    
+DE CLIENTE('172.25.0.6', 51472)
+
+MENSAJE:
+    hola
+DE CLIENTE('172.25.0.6', 51520)
+
+MENSAJE:
+    
+DE CLIENTE('172.25.0.6', 51520)
+
+MENSAJE:
+    esto es una prueba
+DE CLIENTE('172.25.0.6', 51540)
+
+MENSAJE:
+    esto es una prueba
+DE CLIENTE('172.25.0.6', 51558)
+
+MENSAJE:
+    tercer mensaje
+DE CLIENTE('172.25.0.6', 51558)
+
+MENSAJE:
+    --quit--
+DE CLIENTE('172.25.0.6', 51606)
+
+MENSAJE:
+    esto es una prueba
+DE CLIENTE('172.25.0.6', 51698)
+
+MENSAJE:
+    tercer mensaje
+DE CLIENTE('172.25.0.6', 51698)
+
+MENSAJE:
+    hola
+DE CLIENTE('172.25.0.6', 51944)
+
+MENSAJE:
+    tercer mensaje
+DE CLIENTE('172.25.0.6', 51944)
+
+MENSAJE:
+    --quit--
+DE CLIENTE('172.25.0.6', 51944)
+
+MENSAJE:
+    --quit--
+DE CLIENTE('172.25.0.6', 51960)
+
+MENSAJE:
+    tercer mensaje
+DE CLIENTE('172.25.0.6', 51990)
+
+MENSAJE:
+    esto es una prueba
+DE CLIENTE('172.25.0.6', 52002)
+

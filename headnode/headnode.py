@@ -71,7 +71,7 @@ def recibir_input_socket(mySocket,max_buffer_size=1024):
     return decoded_input    
 
 def guardar_en_archivo(input_str,addr):
-    file  = open("log.txt","a")
+    file  = open("archivos/log.txt","a")
     file.write(input_str + " " +str(addr) + "\n")
     file.close()
     
@@ -109,7 +109,7 @@ def multicast(sockets):
         socket.send("--estado--".encode())
         respuesta = recibir_input_socket(socket)
         if "--vivo--" in respuesta:
-            escribir("hearbeat_server.txt",time.ctime(time.time()) + " " + str(socket.getpeername())+"\n")
+            escribir("archivos/hearbeat_server.txt",time.ctime(time.time()) + " " + str(socket.getpeername())+"\n")
                      
 if __name__ == '__main__':
     Main()

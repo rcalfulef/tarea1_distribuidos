@@ -58,13 +58,13 @@ def recibir_input(conn,addr,max_buffer_size):
         return decoded_input
     
 def guardar_en_log(input_str,addr):
-    file  = open("log.txt","a")
+    file  = open("archivos/log.txt","a")
     file.write(input_str + " " +str(addr) + "\n")
     file.close()
     return True
 
 def guardar_en_data(input_str,addr):
-    file  = open("data.txt","a")
+    file  = open("archivos/data.txt","a")
     file.write("MENSAJE:\n    "+input_str + "\nDE CLIENTE" +str(addr) + "\n\n")
     file.close()
     return True

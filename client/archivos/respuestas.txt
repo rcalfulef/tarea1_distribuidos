@@ -1,0 +1,13 @@
+--conexion--
+MENSAJE:
+    hola
+ALMACENADO EN ('172.18.0.2', 8003)
+
+MENSAJE:
+    esto es una prueba
+ALMACENADO EN ('172.18.0.2', 8003)
+
+MENSAJE:
+    tercer mensaje
+ALMACENADO EN ('172.18.0.3', 8001)
+

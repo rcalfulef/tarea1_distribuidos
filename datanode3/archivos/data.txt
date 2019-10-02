@@ -1,0 +1,8 @@
+MENSAJE:
+    hola
+DE CLIENTE('172.18.0.6', 49074)
+
+MENSAJE:
+    esto es una prueba
+DE CLIENTE('172.18.0.6', 49074)
+

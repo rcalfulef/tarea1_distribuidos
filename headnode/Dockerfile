@@ -6,8 +6,10 @@ RUN apt-get update && apt-get install -y \
 	python3 \
 	python3-pip 
 
-RUN mkdir /usr/bin/archivos
 
-COPY headnode.py /usr/bin/archivos/headnode.py
+RUN mkdir archivos
 
-CMD ["python3" ,"/usr/bin/archivos/headnode.py"] 
+COPY headnode.py /
+COPY input.txt /
+
+CMD ["python3" ,"/headnode.py"] 

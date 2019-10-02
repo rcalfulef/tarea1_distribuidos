@@ -17,7 +17,7 @@ def Main():
     #message = input("Ingrese un mensaje: ")
     
 
-    mensajes = ['hola','esto es una prueba','salir']
+    mensajes = ['hola','esto es una prueba','tercer mensaje']
     for message in mensajes:
 
         while message != 'salir':
@@ -42,7 +42,7 @@ def recibir_input(mySocket,max_buffer_size):
         return decoded_input
  
 def guardar_en_archivo(input_str):
-    file = open("respuestas.txt","a")
+    file = open("archivos/respuestas.txt","a")
     file.write(input_str + "\n")
     file.close()
     

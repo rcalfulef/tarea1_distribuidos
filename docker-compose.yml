@@ -12,15 +12,17 @@ services:
       - datanode2
       - datanode3
     volumes:
-      - ./headnode:/usr/bin/archivos
-
+      - ./headnode/archivos:/archivos
+    privileged: true
+    
   datanode1:
     container_name: datanode1
     build: ./datanode1
     expose: 
       - "8001"
     volumes:
-      - ./datanode1:/usr/bin/archivos
+      - ./datanode1/archivos:/archivos
+    privileged: true
 
   datanode2:
     container_name: datanode2
@@ -28,28 +30,25 @@ services:
     expose: 
       - "8002"
     volumes:
-      - datanode2:/usr/bin/archivos
-
+      - ./datanode2/archivos:/archivos
+    privileged: true
+    
   datanode3:
     container_name: datanode3
     build: ./datanode3
     expose: 
       - "8003"
     volumes:
-      - ./datanode3:/usr/bin/archivos
-  
+      - ./datanode3/archivos:/archivos
+    privileged: true
+    
   client:
     container_name: client
-    build: ./cliente
+    build: ./client
     depends_on:
       - headnode
     volumes:
-      - ./cliente:/usr/bin/archivos
+      - ./client/archivos:/archivos
+    privileged: true
   
-volumes:
-  headnode:
-  datanode1:
-  datanode2:
-  datanode3:
-  client:
 

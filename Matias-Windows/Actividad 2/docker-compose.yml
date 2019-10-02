@@ -1,0 +1,50 @@
+version: '3.4'
+
+services:
+
+  headnode:
+    container_name: headnode2
+    build: ./headnode
+    expose: 
+      - "5000"
+    depends_on:
+      - datanode1
+      - datanode2
+      - datanode3
+    volumes:
+      - ~/temporal/Actividad2/headnode:/log
+
+  datanode1:
+    container_name: datanode1
+    build: ./datanode1
+    expose: 
+      - "8001"
+    volumes:
+      - ~/temporal/Actividad2/datanode1:/log
+
+  datanode2:
+    container_name: datanode2
+    build: ./datanode2
+    expose: 
+      - "8002"
+    volumes:
+      - ~/temporal/Actividad2/datanode2:/log
+
+  datanode3:
+    container_name: datanode3
+    build: ./datanode3
+    expose: 
+      - "8003"
+    volumes:
+      - ~/temporal/Actividad2/datanode3:/log
+  
+  client:
+    container_name: client
+    build: ./cliente
+    depends_on:
+      - headnode
+    volumes:
+      - ~/temporal/Actividad2/client:/log
+  
+
+

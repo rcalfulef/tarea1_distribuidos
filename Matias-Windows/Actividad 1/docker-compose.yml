@@ -1,0 +1,13 @@
+version: '3'
+services:
+  headnode:
+    container_name: headnode
+    build: ./headnode
+    volumes:
+      - ~/temporal/Actividad1/headnode:/log
+
+  cliente:
+    container_name: cliente
+    build: ./cliente
+    volumes:
+      - ~/temporal/Actividad1/cliente:/log

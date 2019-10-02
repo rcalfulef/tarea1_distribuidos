@@ -1,15 +1,15 @@
 import socket
 
 def Main():
-    host = "datanode3"  # Ip host
-    port =  5003
-    mySocket = socket.socket()  # Instanciamos un socket
+    host = "datanode2"  # Ip host
+    port =  8002
+    mySocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # Instanciamos un socket
     
     try:
         mySocket.bind((host,port)) # La funcion bind recibe una tupla, que contiene el host y el puerto 
 		
     except:
-        print("no se ha podido crear el socket")
+        print("no se ha podido crear el socket del datanode 2")
         exit(1)
         
     mySocket.listen(1)  # solo soportara una conexion

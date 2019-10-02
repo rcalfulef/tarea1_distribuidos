@@ -2,8 +2,8 @@ import socket
 
 def Main():
     host = "datanode1"  # Ip host
-    port =  5001
-    mySocket = socket.socket()  # Instanciamos un socket
+    port =  8001
+    mySocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # Instanciamos un socket
     
     try:
         mySocket.bind((host,port)) # La funcion bind recibe una tupla, que contiene el host y el puerto 

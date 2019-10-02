@@ -15,7 +15,7 @@ def Main():
     try:
         mySocket.bind((host,port)) # La funcion bind recibe una tupla, que contiene el host y el puerto 	
     except:
-        print("no se ha podido crear el socket del servidor")
+        print("no se ha podido crear el socket del headnode")
         exit(1)
 	
     mySocket.listen(3)  # le pasamos 1 para que escuche hasta que se cierre la conexion
@@ -91,12 +91,12 @@ def sockets_datanodes(cant_datanodes):
         sock.connect((dhost,dport))
         lista.append(sock)"""
 
-    sock1 = socket.socket()
-    sock1.connect(("datanode1",5001))
-    sock2 = socket.socket()
-    sock2.connect(("datanode2",5002))
-    sock3 = socket.socket()
-    sock3.connect(("datanode3",5003))
+    sock1 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    sock1.connect(('datanode1',8001))
+    sock2 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    sock2.connect(('datanode2',8002))
+    sock3 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    sock3.connect(('datanode3',8003))
     
     lista = [sock1,sock2,sock3]
 

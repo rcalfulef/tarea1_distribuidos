@@ -1,42 +1,40 @@
-version: '3'
+version: '3.4'
 
 services:
+
+  headnode:
+    container_name: headnode
+    build: ./headnode
+    expose: 
+      - "5000"
+    depends_on:
+      - datanode1
+      - datanode2
+      - datanode3
+
   datanode1:
     container_name: datanode1
-    build:
-      context: ./app_datanode1
-      dockerfile: Dockerfile
-    image: ubuntu
-    volumes:
-      - ./app_datanode1:/usr/bin:rw
+    build: ./datanode1
+    expose: 
+      - "8001"
 
   datanode2:
     container_name: datanode2
-    build:
-      context: ./app_datanode2
-      dockerfile: Dockerfile
-    image: ubuntu
-    volumes:
-      - ./app_datanode2:/usr/bin:rw
+    build: ./datanode2
+    expose: 
+      - "8002"
 
   datanode3:
     container_name: datanode3
-    build:  
-      context: ./app_datanode3
-      dockerfile: Dockerfile
-    image: ubuntu
-    volumes:
-      - ./app_datanode3:/usr/bin:rw
+    build: ./datanode3
+    expose: 
+      - "8003"
   
-  headnode:
-    container_name: headnode
-    build:
-      context: ./app_headnode
-      dockerfile: Dockerfile
-    image: ubuntu
-    volumes:
-    - act1:/usr/bin:rw
+  client:
+    container_name: client
+    build: ./cliente
+    depends_on:
+      - headnode
   
 
-volumes:
-   act1:
+

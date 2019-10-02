@@ -1,10 +1,10 @@
 import socket
  
 def Main():
-    host = str(input("ingrese ip del servidor: "))
-    port = int(input("ingrese puerto del servidor: "))
+    host = 'headnode'
+    port = 5000
     
-    mySocket = socket.socket()
+    mySocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     try:
         mySocket.connect((host,port))
     except:
@@ -14,17 +14,21 @@ def Main():
     data = recibir_input(mySocket,1024)
     print(data)
     print("Ingrese 'salir' para cerrar programa:")
-    message = input("Ingrese un mensaje: ")
+    #message = input("Ingrese un mensaje: ")
     
-    while message != 'salir':
-        mySocket.send(message.encode())
-        data = recibir_input(mySocket,1024)
-        if "--conexion--" in data:
-            print("conexion exitosa!")
-            message = input("Ingrese un mensaje: ")
-        else:
-            print ('Recibido desde el servidor: ' + data)
-            message = input("Ingrese un mensaje: ")
+
+    mensajes = ['hola','esto es una prueba','salir']
+    for message in mensajes:
+
+        while message != 'salir':
+            mySocket.send(message.encode())
+            data = recibir_input(mySocket,1024)
+            if "--conexion--" in data:
+                print("conexion exitosa!")
+                message = input("Ingrese un mensaje: ")
+            else:
+                print ('Recibido desde el servidor: ' + data)
+                message = input("Ingrese un mensaje: ")
     
     mySocket.send(b"--quit--")
 

@@ -25,12 +25,14 @@ def Main():
             data = recibir_input(mySocket,1024)
             if "--conexion--" in data:
                 print("conexion exitosa!")
-                message = input("Ingrese un mensaje: ")
+                #message = input("Ingrese un mensaje: ")
+                break
             else:
                 print ('Recibido desde el servidor: ' + data)
-                message = input("Ingrese un mensaje: ")
-    
-    mySocket.send(b"--quit--")
+                #message = input("Ingrese un mensaje: ")
+                break
+        if message == 'salir':
+            mySocket.send(b"--quit--")
 
 def recibir_input(mySocket,max_buffer_size):
     input_servidor = mySocket.recv(max_buffer_size)

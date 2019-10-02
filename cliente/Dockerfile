@@ -6,6 +6,8 @@ RUN apt-get update && apt-get install -y \
 	python3 \
 	python3-pip 
 
-COPY client.py /usr/bin/client.py
+RUN mkdir /usr/bin/archivos
 
-CMD ["python3" ,"/usr/bin/client.py"]
+COPY client.py /usr/bin/archivos/client.py
+
+CMD ["python3" ,"/usr/bin/archivos/client.py"]

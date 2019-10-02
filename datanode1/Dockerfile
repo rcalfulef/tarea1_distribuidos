@@ -6,6 +6,8 @@ RUN apt-get update && apt-get install -y \
 	python3 \
 	python3-pip
 
-COPY datanode.py /usr/bin/datanode.py
+RUN mkdir /usr/bin/archivos
 
-CMD ["python3" ,"/usr/bin/datanode.py"]
+COPY datanode.py /usr/bin/archivos/datanode.py
+
+CMD ["python3" ,"/usr/bin/archivos/datanode.py"]

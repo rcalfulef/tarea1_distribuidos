@@ -1,6 +1,0 @@
-datanode1
-5001
-datanode2
-5001
-datanode3
-5001

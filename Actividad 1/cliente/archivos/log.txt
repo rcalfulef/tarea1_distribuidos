@@ -1,0 +1,1 @@
+2019-10-02 18:44:24.646109 : El cliente con ip: 172.19.0.3 envio el mensaje: Un mensajito muy lindo 

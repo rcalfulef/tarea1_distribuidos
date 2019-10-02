@@ -1,0 +1,13 @@
+version: '3'
+services:
+  headnode:
+    container_name: headnode_act1
+    build: ./headnode
+    volumes:
+      - ./cliente/archivos/:/log
+
+  cliente:
+    container_name: cliente_act1
+    build: ./cliente
+    volumes:
+      - ./headnode/archivos/:/log

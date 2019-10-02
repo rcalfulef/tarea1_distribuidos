@@ -1,0 +1,34 @@
+--conexion--
+MENSAJE DEL CLIENTE:
+    hola uWu
+ FUE ALMACENADO EN ('172.25.0.2', 8001)
+
+MENSAJE DEL CLIENTE:
+    soy el cliente
+ FUE ALMACENADO EN ('172.25.0.4', 8002)
+
+MENSAJE DEL CLIENTE:
+    y esta es una prueba
+ FUE ALMACENADO EN ('172.25.0.3', 8003)
+
+MENSAJE DEL CLIENTE:
+    abandonare el servidor
+ FUE ALMACENADO EN ('172.25.0.4', 8002)
+
+--conexion--
+MENSAJE DEL CLIENTE:
+    hola uWu
+ FUE ALMACENADO EN ('172.25.0.4', 8002)
+
+MENSAJE DEL CLIENTE:
+    soy el cliente
+ FUE ALMACENADO EN ('172.25.0.2', 8003)
+
+MENSAJE DEL CLIENTE:
+    y esta es una prueba
+ FUE ALMACENADO EN ('172.25.0.4', 8002)
+
+MENSAJE DEL CLIENTE:
+    abandonare el servidor
+ FUE ALMACENADO EN ('172.25.0.3', 8001)
+

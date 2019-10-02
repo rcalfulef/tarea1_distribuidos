@@ -1,0 +1,1 @@
+2019-10-02 18:44:24.646200 : La respuesta del Servidor es: Hola, su mensaje fue recibido 
